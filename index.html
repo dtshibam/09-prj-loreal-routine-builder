@@ -1,92 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'Oréal | Smart Routine & Product Advisor</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <div class="page-wrapper">
-      <header class="site-header">
-        <img src="img/loreal-logo.png" alt="L'Oréal Logo" class="logo" />
-        <h1 class="site-title">Smart Routine & Product Advisor</h1>
-      </header>
+        <header class="site-header">
+            <img src="img/loreal-logo.png" alt="L'Oréal Logo" class="logo">
+            <h1 class="site-title">SMART ROUTINE & PRODUCT ADVISOR</h1>
+        </header>
 
-      <div class="search-section">
-        <div class="filter-controls">
-          <select id="categoryFilter">
-            <option value="" disabled selected>Choose a Category</option>
-            <option value="all">All Products</option>
-            <option value="cleanser">Cleansers</option>
-            <option value="moisturizer">Moisturizers & Treatments</option>
-            <option value="haircare">Haircare</option>
-            <option value="makeup">Makeup</option>
-            <option value="hair color">Hair Color</option>
-            <option value="hair styling">Hair Styling</option>
-            <option value="men's grooming">Men's Grooming</option>
-            <option value="suncare">Suncare</option>
-            <option value="fragrance">Fragrance</option>
-          </select>
-          
-          <input type="text" id="productSearch" placeholder="Search by name or keyword..." />
-        </div>
-      </div>
-
-      <div id="productsContainer" class="products-grid">
-        </div>
-
-      <div class="selected-products-container">
-        <h2>Selected Products</h2>
-        <div id="selectedProductsList" class="selected-items-flex">
+        <div class="search-section">
+            <div class="filter-controls">
+                <select id="categoryFilter">
+                    <option value="all">All Products</option>
+                    <option value="cleanser">Cleansers</option>
+                    <option value="moisturizer">Moisturizers & Treatments</option>
+                    <option value="haircare">Haircare</option>
+                    <option value="makeup">Makeup</option>
+                    <option value="fragrance">Fragrance</option>
+                </select>
+                <input type="text" id="productSearch" placeholder="Search by name, brand, or keyword...">
             </div>
-        <button id="generateRoutine" class="generate-btn">
-          <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Routine
-        </button>
-      </div>
-
-      <section class="chatbox">
-        <h2>Your Personalized Consultation</h2>
-        <div id="chatWindow" class="chat-window">
-            <div class="message ai-message">Welcome! Select products above to build your routine, then click "Generate Routine" to get started.</div>
         </div>
 
-        <form id="chatForm" class="chat-form">
-          <label for="userInput" class="visually-hidden">Message</label>
-          <input
-            id="userInput"
-            name="userInput"
-            type="text"
-            placeholder="Ask me about products or routines…"
-            autocomplete="off"
-            required
-          />
-          <button type="submit" id="sendBtn">
-            <i class="fa-solid fa-paper-plane"></i>
-            <span class="visually-hidden">Send</span>
-          </button>
-        </form>
-      </section>
+        <div id="productsContainer" class="products-grid"></div>
 
-      <footer class="site-footer">
-        <p>&copy; 2026 L'Oréal. All rights reserved.</p>
-        <nav>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Contact</a>
-        </nav>
-      </footer>
+        <div class="selected-products-container">
+            <h2>Selected Products</h2>
+            <div id="selectedProductsList" class="selected-items-flex">
+                </div>
+            <button id="generateRoutine" class="generate-btn">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Routine
+            </button>
+        </div>
+
+        <section class="chatbox">
+            <h2>Your Personalized Consultation</h2>
+            <div id="chatWindow" class="chat-window">
+                <div class="message ai-message">Welcome! Select products above to build your routine, then click "Generate Routine" to begin.</div>
+            </div>
+            <form id="chatForm" class="chat-form">
+                <input id="userInput" type="text" placeholder="Ask a follow-up question..." autocomplete="off" required>
+                <button type="submit" id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </section>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 L'Oréal. All rights reserved.</p>
+            <nav>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Contact</a>
+            </nav>
+        </footer>
     </div>
-
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
